@@ -1,0 +1,21 @@
+.outline {
+  border: 1px solid #0b2239;
+  border-radius: 4px;
+}
+
+.nav-link {
+  color: #0b2239;
+}
+
+.nav-link:hover {
+  color: #0b2239;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #0b2239 !important;
+}
+
+.nav-pill-container {
+  padding-left: 4rem;
+}

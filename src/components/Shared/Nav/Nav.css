@@ -1,0 +1,31 @@
+.navigation-container {
+  display: flex;
+  background-color: #0b2239;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+}
+
+.dropdown-menu {
+  top: 90%;
+  left: -80px;
+}
+
+.dropdown-item {
+  cursor: pointer;
+  max-width: 155px;
+}
+
+.dropdown-toggle::after {
+  color: white;
+}
+
+.navbar-collapse {
+  flex-grow: 0 !important;
+}
+
+.profile-image {
+  background-color: white;
+}

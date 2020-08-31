@@ -1,0 +1,49 @@
+.transactions-container {
+  display: flex;
+}
+
+.transactions-container .transactions-form {
+  width: 30%;
+}
+
+.transactions-container .transactions-form .form-container {
+  width: 300px;
+}
+
+.transactions-container .transactions-table {
+  width: 70%;
+}
+
+.table-container {
+  height: 396px;
+  width: 805px;
+}
+
+.error-message {
+  height: 15px;
+  width: 400px;
+  font-size: 0.75rem;
+  margin-top: 5px;
+  color: red;
+}
+
+.error {
+  -webkit-animation: shake 0.2s ease-in-out 0s 2;
+  animation: shake 0.2s ease-in-out 0s 2;
+  border: 1px solid red !important;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+  25% {
+    margin-left: 0.25rem;
+  }
+  75% {
+    margin-left: -0.25rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
+}
