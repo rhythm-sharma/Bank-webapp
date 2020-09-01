@@ -3,7 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import { secureStorage } from "../../../utils/clientStorage/clientStorage";
 import { logoutUser } from "../../../utils/authentication/authentication";
 import bankLogo from "../../../assets/images/SVG/bank.svg";
-import Dropdown from "react-bootstrap/Dropdown";
 import "./Nav.css";
 
 class Navigation extends Component {

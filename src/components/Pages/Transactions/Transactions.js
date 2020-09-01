@@ -49,9 +49,9 @@ class Transactions extends Component {
   }
 
   setUpdateTable = (updateTable) => {
-    this.setState = {
+    this.setState({
       updateTable: updateTable,
-    };
+    });
   };
 
   resetAnimation = (index) => {
@@ -166,8 +166,6 @@ class Transactions extends Component {
       resetTransactionsForm[1].options = userObj.to;
 
       resetTransactionsForm[2].value = "";
-
-      console.log("resetTransactionsForm ", resetTransactionsForm);
 
       this.setState({
         transactionsForm: resetTransactionsForm,

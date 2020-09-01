@@ -33,7 +33,7 @@ class Capital extends Component {
   }
 
   componentDidMount() {
-    const { userObj, capitalForm } = this.state;
+    const { capitalForm } = this.state;
     let tempCapitalForm = capitalForm;
     tempCapitalForm[0].value = tempCapitalForm[0].options[0];
     this.setState({
@@ -42,9 +42,9 @@ class Capital extends Component {
   }
 
   setUpdateTable = (updateTable) => {
-    this.setState = {
+    this.setState({
       updateTable: updateTable,
-    };
+    });
   };
 
   resetAnimation = (index) => {
@@ -162,15 +162,9 @@ class Capital extends Component {
 
       resetCapitalForm[0].value = tempCapitalForm[0].options[0];
       this.setState({
-        capitalForm: tempCapitalForm,
+        capitalForm: resetCapitalForm,
       });
-
-      // resetCapitalForm
     }
-  };
-
-  handleFormChange = () => {
-    console.log("chjange");
   };
 
   render() {
@@ -219,9 +213,6 @@ class Capital extends Component {
               <Dropzone
                 className={`${capitalForm[2].error !== "" ? "error" : ""}`}
                 onDrop={(acceptedFiles) => {
-                  // this.handleFileUploadChange();
-                  console.log(acceptedFiles[0]);
-
                   const fileObject = acceptedFiles[0];
 
                   const newObject = {

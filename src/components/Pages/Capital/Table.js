@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { AgGridReact } from "ag-grid-react";
-import { Document, Page } from "react-pdf";
-import { secureStorage } from "../../../utils/clientStorage/clientStorage";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 
@@ -23,12 +21,6 @@ class DataTable extends Component {
           filter: true,
         },
         {
-          headerName: "Preview",
-          field: "preview",
-          sortable: true,
-          filter: true,
-        },
-        {
           headerName: "Amount",
           field: "amount",
           sortable: true,
@@ -37,6 +29,12 @@ class DataTable extends Component {
         {
           headerName: "Status",
           field: "status",
+          sortable: true,
+          filter: true,
+        },
+        {
+          headerName: "Preview",
+          field: "preview",
           sortable: true,
           filter: true,
         },
@@ -49,7 +47,6 @@ class DataTable extends Component {
 
   componentDidMount() {
     const { file } = this.state;
-    console.log(JSON.parse(localStorage.getItem("file")));
     this.setState({
       file: JSON.parse(localStorage.getItem("file")),
     });
@@ -57,7 +54,6 @@ class DataTable extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.updateTable !== this.props.updateTable) {
-      console.log(this.props.userObj.capital);
       this.state.gridApi.setRowData(this.props.userObj.capital);
       this.props.setUpdateTable(false);
     }
@@ -70,7 +66,6 @@ class DataTable extends Component {
   };
 
   render() {
-    const { file } = this.state;
     return (
       <div className="ag-theme-alpine table-container">
         <AgGridReact
@@ -78,7 +73,6 @@ class DataTable extends Component {
           rowData={this.state.rowData}
           onGridReady={this.onGridReady}
         ></AgGridReact>
-        {/* {file && <Document file={file.path}></Document>} */}
       </div>
     );
   }

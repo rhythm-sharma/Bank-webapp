@@ -120,7 +120,6 @@ class SignUp extends Component {
 
     if (valid) {
       if (this.isUserExist(signUpCredentials)) {
-        console.log("Username already in use, Please try with another one!");
         this.setState({
           usernameExistsError:
             "Username already in use, Please try with another one!",
@@ -212,7 +211,7 @@ class SignUp extends Component {
                     className={`form-control ${
                       signUpCredentials[1].error !== "" ? "error" : ""
                     }`}
-                    placeholder="Unique username"
+                    placeholder="Username"
                     type="text"
                     onChange={this.handleUserNameChange}
                   />

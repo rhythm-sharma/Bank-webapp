@@ -1,6 +1,5 @@
 const isLogin = () => {
   const currentUser = sessionStorage.currentUser;
-  console.log("currentUser: ", currentUser);
   if (
     currentUser === undefined ||
     currentUser === "undefined" ||

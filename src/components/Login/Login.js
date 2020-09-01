@@ -2,7 +2,7 @@ import React from "react";
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import { loginUser } from "../../utils/authentication/authentication";
-import { secureStorage, User } from "../../utils/clientStorage/clientStorage";
+import { secureStorage } from "../../utils/clientStorage/clientStorage";
 import bankLogo from "../../assets/images/SVG/bank.svg";
 import "./Login.css";
 
@@ -113,7 +113,6 @@ class Login extends Component {
       const userName = loginCredentials[1].value;
       if (userName) {
         const currentUserObj = secureStorage.getItem(userName);
-        console.log("currentUserObj: ", currentUserObj);
         if (currentUserObj && currentUserObj.name === userName) {
           loginUser(userName);
         } else {
